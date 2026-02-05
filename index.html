@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Монитор облигаций</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-flex">
+            <h1 id="pageTitle">Облигации</h1>
+            <button id="menuBtn" class="icon-btn" aria-label="Открыть меню">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+        <nav id="sideMenu" class="side-menu">
+            <div class="menu-header">
+                <span>Навигация</span>
+                <button id="closeMenu" class="icon-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+            </div>
+            <div class="menu-items">
+                <button class="menu-item active" id="navBonds">Облигации</button>
+                <button class="menu-item" id="navCoupons">Предстоящие купоны</button>
+            </div>
+        </nav>
+        <div id="overlay" class="overlay"></div>
+    </header>
+
+    <main class="container">
+        <div id="appContent">
+            <div class="loader-wrapper">
+                <div class="spinner"></div>
+                <p>Загрузка данных...</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
