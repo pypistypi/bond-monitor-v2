@@ -10,7 +10,11 @@ const ISINS = [
 ];
 
 let bondData = [];
-let userQuantities = JSON.parse(localStorage.getItem('bondQuantities') || '{}');
+async function loadUserQuantities() {
+    const res = await fetch('data.json');
+    userQuantities = await res.json();
+}
+
 let currentPage = 'bonds';
 
 // DOM Elements
